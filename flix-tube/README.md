@@ -1,4 +1,4 @@
-# Flix-Tube
+# FlixTube
 
 Initial service developed.
 
