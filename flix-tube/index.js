@@ -3,7 +3,12 @@ const fs = require('fs');
 
 const app = express();
 
-const port = 3000;
+// const port = process.env.PORT;
+const port = process.env.PORT || 3000;
+
+if(!port) {
+    throw new Error('The port number for the HTTP server is not specified under the environment variable PORT.')
+}
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
